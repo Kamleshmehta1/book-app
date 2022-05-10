@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    padding: 0 20px 0 20px;
+    flex-wrap: wrap;
+}
+
+img {
+    height: 280px;
+    width: 180px;
+    cursor: pointer;
+}
+
+.item {
+    margin: 10px;
+    background-color: rgb(239, 239, 239, 0.9);
+    display: flex;
+    flex: 40%;
+    border-radius: 20px;
+    padding: 10px 0 0 50px;
+}
+
+.item:hover {
+    background-color: rgb(239, 239, 239, 1);
+}
+
+.left,
+.right {
+    flex: 25%;
+}
+
+.left {
+    padding: 50px;
+}
+
+
+
+@media (max-width: 800px) {
+    img {
+        margin: auto;
+    }
+
+    .item {
+        flex: 100%;
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        flex: 100%;
+    }
+
+    .mainPage {
+        padding-top: 100px;
+    }
+
+    .filters {
+        min-width: 100%;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .search {
+        min-width: 70%;
+    }
+
+    .heading {
+        margin: 0;
+    }
+
+
+    .mainPage {
+        height: 150vh;
+    }
+
+
+    .tooltip {
+        margin: 0;
+    }
+
+    .mainPage {
+        height: auto;
+    }
+}
+
+.mainPage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("./Components/bookimg.jpg");
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+}
+
+
+.container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("./Components/bookimg.jpg");
+}
+
+
+
+.read {
+    cursor: pointer;
+    color: blue;
+}
+
+.heading {
+    margin: 0px 0 10px 0;
+    padding: 15% 0 0 0;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 0.5rem;
+    text-align: center;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.modal-content {
+    background-image: url("./Components/black-img.jpg");
+    opacity: 0.91;
+    margin: auto;
+    padding: 30px;
+    height: auto;
+    border: 1px solid #888;
+    width: 90%;
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa.fa-angle-down {
+    cursor: pointer;
+    font-size: 7rem;
+    color: #eee;
+    width: 100%;
+    text-align: center;
+}
+
+.fa.fa-shopping-cart {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.shop-btn {
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.shop-a {
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.mod-desc {
+    line-height: 1.5rem;
+    font-style: italic;
+}
+
+.desc {
+    font-style: italic;
+    line-height: 1.2rem;
+}
+
+.cont-head {
+    color: #9b2335;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.check-more {
+    margin: 15px 10px 10px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: none;
+    padding: 8px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bold-name {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.p-line {
+    margin: 0px;
+    font-size: 1.2rem;
+    padding: 10px 0 10px 0;
+}
+
+.modal-content1 {
+    display: none;
+}
+
+.search {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+
+
+.input-search {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    outline: none;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.search-button {
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    right: 0px;
+    z-index: 1;
+    border: none;
+    top: 0px;
+    padding: 10px 20px 10px 20px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    background-color: #1e90ff;
+    transform: translateX(2px);
+}
+
+.fa.fa-search {
+    font-size: 1.5rem;
+}
+
+.pages {
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+.left-side,
+.right-side {
+    border: none;
+    cursor: pointer;
+    border-radius: 25%;
+    color: purple;
+    background-color: none;
+    font-size: 2rem;
+    padding: 20px;
+    margin: 10px;
+}
+
+.pages {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("./Components/bookimg.jpg");
+    /* background-size: cover; */
+}
+
+.dropdown {
+    cursor: pointer;
+    margin-top: 20px;
+    color: white;
+    padding: 10px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    background-color: dodgerblue;
+}
+
+.options {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.filters {
+    display: none;
+    max-width: 50%;
+    background-image: url("./Components/black-img.jpg");
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid wheat;
+}
+
+.fil-btn {
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 5px;
+    /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptext {
+    text-align: left;
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip {
+    color: #fff;
+    margin-left: 50px;
+}
+
+.filter-container {
+    padding: 20px;
+    max-width: 50%;
+    margin: auto;
+}
+
+.fil-ip {
+    max-width: 100%;
+    width: auto;
+}
+
+/* scrollbar design */
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 100px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-image: linear-gradient(#9A9483, #AAA492, #C7BEA2);
+    outline: 1px solid slategrey;
+}
+
+.error {
+    text-align: center;
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+}
